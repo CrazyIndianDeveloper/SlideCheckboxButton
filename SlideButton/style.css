@@ -1,0 +1,117 @@
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	flex-direction: column;
+	overflow: hidden;
+	background: #191919;
+}
+
+h1 {
+    color: red;
+}
+p{
+    font-size: 30px;
+    color: red;
+}
+
+a{
+    color: orange;
+}
+
+label
+{
+	position: relative;
+	width: 240px;
+	height: 80px;
+	cursor: pointer;
+	margin: 20px 0;
+
+}
+label input
+{
+	opacity: 0;
+
+}
+label .check
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	cursor: pointer;
+	width: 100%;
+	height: 100%;
+	background: #606060;
+	border-radius: 40px;
+	box-shadow: 0 0 0 4px #fff;
+}
+
+label .check:before
+{
+	content: '';
+	position: absolute;
+	top: calc(50% - 4px);
+	left: -30px;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: #f00;
+	transition: 0.5s;
+	box-shadow: 0 0 5px #f00,
+	0 0 10px #f00,
+	0 0 20px #f00,
+	0 0 40px #f00,
+	0 0 80px #f00;
+}
+label input:checked ~ .check:before
+{
+	background: #101010;
+	box-shadow: none;
+}
+label .check:after
+{
+	content: '';
+	position: absolute;
+	top:calc(50% -  4px);
+	right: -30px;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: #101010;
+	transition: 0.5s;
+}
+label input:checked ~ .check:after
+{
+	background: #0f0;
+	box-shadow: 0 0 5px #0f0,
+	0  0 10px #0f0,
+	0  0 40px #0f0,
+	0  0 80px #0f0;
+}
+label .btn
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 120px;
+	height: 80px;
+	border-radius: 100px;
+	background: #ffffff;
+	box-shadow: inset 0 -20px 15px #ccffff,
+			inset 0 20px 15px #ccffff;
+}
+label .btn:before
+{
+}
+label input:checked ~ .btn{
+	left: 50%;
+}
+
+
